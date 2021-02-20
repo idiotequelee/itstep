@@ -4,6 +4,8 @@ def isPalindrome(s):
 s = input().lower().replace(' ', '')
 print(s)
 ans = isPalindrome(s)
+ 
+ #test 4
 
 if ans:
 	print("Yes")
