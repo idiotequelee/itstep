@@ -1,0 +1,28 @@
+[
+  {
+    "bread": 12,
+    "milk": 1.6,
+    "potato": 0.4,
+    "meat": 2.4
+  },
+  {
+    "bread": 1.2,
+    "milk": 1.6,
+    "potato": 0.4,
+    "meat": 2.4,
+    "eggs": 0.4,
+    "fish": 2.4
+  },
+  {
+    "bread": 45,
+    "milk": 65
+  },
+  {
+    "bread": 154,
+    "milk": 35,
+    "chocolate": 54
+  },
+  {
+    "cookie": 100
+  }
+]
