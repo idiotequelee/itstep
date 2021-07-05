@@ -49,28 +49,27 @@ def photo_handler(message):
     bot.send_message(message.chat.id, "Nice photo")
     print("Send nice")
 
-@bot.message_handler(func=lambda m: True)
-def send_welcome(message):
-    print(message)
-    bot.reply_to(message, "Welcome")
+# @bot.message_handler(func=lambda m: True)
+# def send_welcome(message):
+#     print(message)
+#     bot.reply_to(message, "Welcome")
 
-# @bot.message_handler(content_types=["text"])
-# def mark_handler(message):
-#     msg = message.text.strip()
-#     if msg in ["1", "2", "3", "4", "5"]:
-#         bot.reply_to(message, "Дані твого самопочуття зафіксовано")
-#         try:
-#             all_data = read_file()
-#         except:
-#             all_data = {}
-#         chat_id = message.chat.id
-#         if chat_id in all_data:
-#             all_data[chat_id].append()
-#         else:
-#             all_data[chat_id] = [(str(date.now()), msg)]
-#         write_file(all_data)
+@bot.message_handler(content_types=["text"])
+def mark_handler(message):
+    msg = message.text.strip()
+    if msg in ["1", "2", "3", "4", "5"]:
+        bot.reply_to(message, "Дані твого самопочуття зафіксовано")
+        try:
+            all_data = read_file()
+        except:
+            all_data = {}
+        chat_id = message.chat.id
+        if chat_id in all_data:
+            all_data[chat_id].append()
+        else:
+            all_data[chat_id] = [(str(date.now()), msg)]
+        write_file(all_data)
     
     
-
 schedule()
 bot.polling()
